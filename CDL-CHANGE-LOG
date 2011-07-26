@@ -1,0 +1,5 @@
+Change Log for CDL-customized marc4j
+
+2011-07-26 Priyank Doshi
+Patched MarcStreamWriter.java to check maximum record length.
+
