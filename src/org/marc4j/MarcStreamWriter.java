@@ -21,8 +21,10 @@
 package org.marc4j;
 
 import java.io.ByteArrayOutputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.io.StringWriter;
 import java.text.DecimalFormat;
 import java.util.Iterator;
 import java.util.List;
@@ -76,6 +78,8 @@ import org.marc4j.marc.Subfield;
 public class MarcStreamWriter implements MarcWriter {
 
     private OutputStream out = null;
+    
+    private OutputStream error = null;
 
     private String encoding = "ISO8859_1";
 
@@ -133,6 +137,8 @@ public class MarcStreamWriter implements MarcWriter {
         try {
             ByteArrayOutputStream data = new ByteArrayOutputStream();
             ByteArrayOutputStream dir = new ByteArrayOutputStream();
+            error = new FileOutputStream("marc4j_error.log");
+        
 
             // control fields
             List fields = record.getControlFields();
@@ -162,27 +168,35 @@ public class MarcStreamWriter implements MarcWriter {
                     data.write(sf.getCode());
                     data.write(getDataElement(sf.getData()));
                 }
-                data.write(Constants.FT);
-                dir.write(getEntry(df.getTag(), data.size() - previous,
-                        previous));
-                previous = data.size();
+                	
+                	data.write(Constants.FT);
+                    dir.write(getEntry(df.getTag(), data.size() - previous,
+                            previous));
+                    previous = data.size();
+                   
+                
             }
+            
             dir.write(Constants.FT);
 
             // base address of data and logical record length
             Leader ldr = record.getLeader();
-
+       
             ldr.setBaseAddressOfData(24 + dir.size());
             ldr.setRecordLength(ldr.getBaseAddressOfData() + data.size() + 1);
 
             // write record to output stream
             dir.close();
             data.close();
+            
+            if(ldr.getRecordLength() < 99999) {
             write(ldr);
             out.write(dir.toByteArray());
             out.write(data.toByteArray());
             out.write(Constants.RT);
-
+           } 
+            
+            
         } catch (IOException e) {
             throw new MarcException("IO Error occured while writing record", e);
         }
@@ -197,8 +211,7 @@ public class MarcStreamWriter implements MarcWriter {
         out.write(Integer.toString(ldr.getIndicatorCount()).getBytes(encoding));
         out.write(Integer.toString(ldr.getSubfieldCodeLength()).getBytes(
                 encoding));
-        out
-                .write(format5.format(ldr.getBaseAddressOfData()).getBytes(
+        out.write(format5.format(ldr.getBaseAddressOfData()).getBytes(
                         encoding));
         out.write(new String(ldr.getImplDefined2()).getBytes(encoding));
         out.write(new String(ldr.getEntryMap()).getBytes(encoding));

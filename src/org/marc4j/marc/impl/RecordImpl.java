@@ -39,13 +39,22 @@ import org.marc4j.marc.VariableField;
  */
 public class RecordImpl implements Record {
 
-    private Long id;
+    /**
+	 * @param id
+	 * @param leader
+	 * @param controlFields
+	 * @param dataFields
+	 * @param type
+	 */
+
+
+	private Long id;
 
     private Leader leader;
 
-    private List controlFields;
+    protected List controlFields;
 
-    private List dataFields;
+    protected List dataFields;
 
     private String type;
 
@@ -97,14 +106,39 @@ public class RecordImpl implements Record {
                 controlFields.set(0, field);
             else
                 controlFields.add(0, field);
-            Collections.sort(controlFields);
+        //  Collections.sort(controlFields);
         } else if (Verifier.isControlField(tag)) {
             controlFields.add(field);
-            Collections.sort(controlFields);
+         //   Collections.sort(controlFields);
         } else {
             dataFields.add(field);
-            Collections.sort(dataFields);
+           // Collections.sort(dataFields);
         }
+
+    }
+    
+    public void addVariableField(VariableField field, boolean isSorted) {
+        if (!(field instanceof VariableField))
+            throw new IllegalAddException("Expected VariableField instance");
+        
+		if (isSorted) {
+			String tag = field.getTag();
+			if (Verifier.isControlNumberField(tag)) {
+				if (Verifier.hasControlNumberField(controlFields))
+					controlFields.set(0, field);
+				else
+					controlFields.add(0, field);
+				Collections.sort(controlFields);
+			} else if (Verifier.isControlField(tag)) {
+				controlFields.add(field);
+				Collections.sort(controlFields);
+			} else {
+				dataFields.add(field);
+				Collections.sort(dataFields);
+			}
+		} else {
+			throw new IllegalAddException("Expected boolean value 'true'");
+		}
 
     }
 
