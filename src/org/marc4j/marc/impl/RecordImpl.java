@@ -117,6 +117,11 @@ public class RecordImpl implements Record {
 
     }
     
+    /* Modified 06/13/11 
+     * Created an optional OverLoaded method with isSorted Flag 
+     * for the user to output the records with Sorted Tags.
+     * */
+    
     public void addVariableField(VariableField field, boolean isSorted) {
         if (!(field instanceof VariableField))
             throw new IllegalAddException("Expected VariableField instance");

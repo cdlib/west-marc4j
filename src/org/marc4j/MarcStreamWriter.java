@@ -189,7 +189,13 @@ public class MarcStreamWriter implements MarcWriter {
             dir.close();
             data.close();
             
-            if(ldr.getRecordLength() < 99999) {
+         /* Modified 07/26/11 
+          * Implemented if Condition to check for 
+          * Record Length more than 99999 chars before writing 
+          * a file to Output Stream  
+          * */
+      
+            if(ldr.getRecordLength() < 99999) { 
             write(ldr);
             out.write(dir.toByteArray());
             out.write(data.toByteArray());
