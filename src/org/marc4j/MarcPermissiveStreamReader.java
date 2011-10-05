@@ -766,7 +766,7 @@ public class MarcPermissiveStreamReader implements MarcReader {
                     ControlField field = factory.newControlField();
                     field.setTag(tags[i]);
                     field.setData(getDataAsString(byteArray));
-                    record.addVariableField(field);
+                    record.addVariableField(field, permissive); // Modification : 10/05/2011 Added a mermissive flag
     
                 } 
                 else 
@@ -774,7 +774,7 @@ public class MarcPermissiveStreamReader implements MarcReader {
                     byteArray = new byte[lengths[i]];
                     inputrec.readFully(byteArray);
                     try {
-                        record.addVariableField(parseDataField(tags[i], byteArray));
+                        record.addVariableField(parseDataField(tags[i], byteArray), permissive);
                     } catch (IOException e) {
                         throw new MarcException(
                                 "error parsing data field for tag: " + tags[i]
