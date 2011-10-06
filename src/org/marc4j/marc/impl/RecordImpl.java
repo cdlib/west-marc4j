@@ -100,18 +100,6 @@ public class RecordImpl implements Record {
 //                controlFields.set(0, field);
 //            else
                 controlFields.add(0, field);
-<<<<<<< HEAD
-            Collections.sort(controlFields);
-        } else if (Verifier.isControlField(tag)) {
-            controlFields.add(field);
-            Collections.sort(controlFields);
-        } else {
-            dataFields.add(field);
-            Collections.sort(dataFields);
-        }
-
-    }
-=======
 //                Collections.sort(controlFields);
         } else if (Verifier.isControlField(tag)) {
             controlFields.add(field);
@@ -165,9 +153,6 @@ public class RecordImpl implements Record {
     }
     
     
-
->>>>>>> a0c2a7f864f83e50dc4773e789d3237439b72770
-
     public void removeVariableField(VariableField field) {
         String tag = field.getTag();
         if (Verifier.isControlField(tag))
