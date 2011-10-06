@@ -87,96 +87,45 @@ public class RecordImpl implements Record {
         return leader;
     }
 
-    /**
-     * Adds a <code>VariableField</code> being a <code>ControlField</code>
-     * or <code>DataField</code>.
-     * 
-     * If the <code>VariableField</code> is a control number field (001) and
-     * the record already has a control number field, the field is replaced with
-     * the new instance.
-     * 
-     * @param field
-     *            the <code>VariableField</code>
-     * @throws IllegalAddException
-     *             when the parameter is not a <code>VariableField</code>
-     *             instance
-     */
+	/**
+	 * Adds a <code>VariableField</code> being a <code>ControlField</code> or
+	 * <code>DataField</code>.
+	 * 
+	 * If the <code>VariableField</code> is a control number field (001) and the
+	 * record already has a control number field, the field will be added with
+	 * the new instance.
+	 * 
+	 * Change made in method is Unsort
+	 * <code>DataField<code> and <code>ControlField<code>
+	 * 
+	 * @param field
+	 *            the <code>VariableField</code>
+	 * @throws IllegalAddException
+	 *             when the parameter is not a <code>VariableField</code>
+	 *             instance
+	 */
     public void addVariableField(VariableField field) {
         if (!(field instanceof VariableField))
             throw new IllegalAddException("Expected VariableField instance");
 
         String tag = field.getTag();
         if (Verifier.isControlNumberField(tag)) {
-            if (Verifier.hasControlNumberField(controlFields))
-                controlFields.set(0, field);
-            else
+//            if (Verifier.hasControlNumberField(controlFields))
+//                controlFields.set(0, field);
+//            else
                 controlFields.add(0, field);
-        //  Collections.sort(controlFields);
+//              Collections.sort(controlFields);
         } else if (Verifier.isControlField(tag)) {
-            controlFields.add(field);
-         //   Collections.sort(controlFields);
+               controlFields.add(field);
+//             Collections.sort(controlFields);
         } else {
-            dataFields.add(field);
-           // Collections.sort(dataFields);
+               dataFields.add(field);
+//                  Collections.sort(dataFields);
         }
 
     }
     
-    
-    /* 
-     * @author Priyank Doshi
-     * Modified 10/5/11 
-     * Created an optional OverLoaded method with Permissive Flag 
-     * for the user to output the records with Sorted Tags and 
-     * check for duplicate Control Number Field 001.
-     * */
-    
-    public void addVariableField(VariableField field, boolean permissive) {
-        if (!(field instanceof VariableField))
-            throw new IllegalAddException("Expected VariableField instance");
 
-      
-        String tag = field.getTag();
-        
-        if(permissive) {
-        
-        if (Verifier.isControlNumberField(tag) && permissive) {
-        	
-          if (Verifier.hasControlNumberField(controlFields) && !duplicateControlField.add("tag"))
-              	  controlFields.set(0, field);
-            else {
-            	controlFields.add(0, field);
-            	throw new IllegalAddException("Duplicate Control Number Field Instance");
-            }
-         Collections.sort(controlFields);
-        } else if (Verifier.isControlField(tag)) {
-            controlFields.add(field);
-           Collections.sort(controlFields);
-        } else {
-            dataFields.add(field);
-            Collections.sort(dataFields);
-        }
-
-    } else {
-    	
-			if (Verifier.isControlNumberField(tag) && permissive) {
-
-				if (Verifier.hasControlNumberField(controlFields)
-						&& !duplicateControlField.add("tag"))
-					controlFields.set(0, field);
-				else
-					controlFields.add(0, field);
-				// Collections.sort(controlFields);
-			} else if (Verifier.isControlField(tag)) {
-				controlFields.add(field);
-				// Collections.sort(controlFields);
-			} else {
-				dataFields.add(field);
-				// Collections.sort(dataFields);
-			}
-
-		}
-	}
 
 
 
