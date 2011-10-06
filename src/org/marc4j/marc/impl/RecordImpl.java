@@ -22,10 +22,8 @@ package org.marc4j.marc.impl;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
 
 import org.marc4j.marc.ControlField;
 import org.marc4j.marc.IllegalAddException;
@@ -41,26 +39,15 @@ import org.marc4j.marc.VariableField;
  */
 public class RecordImpl implements Record {
 
-    /**
-	 * @param id
-	 * @param leader
-	 * @param controlFields
-	 * @param dataFields
-	 * @param type
-	 */
-
-
-	private Long id;
+    private Long id;
 
     private Leader leader;
 
-    protected List controlFields;
+    private List controlFields;
 
-    protected List dataFields;
+    private List dataFields;
 
     private String type;
-    
-    private Set<String> duplicateControlField;
 
     /**
      * Creates a new <code>Record</code>.
@@ -68,7 +55,6 @@ public class RecordImpl implements Record {
     public RecordImpl() {
         controlFields = new ArrayList();
         dataFields = new ArrayList();
-        duplicateControlField = new HashSet<String>();
     }
 
     public void setType(String type) {
@@ -111,74 +97,16 @@ public class RecordImpl implements Record {
                 controlFields.set(0, field);
             else
                 controlFields.add(0, field);
-        //  Collections.sort(controlFields);
+            Collections.sort(controlFields);
         } else if (Verifier.isControlField(tag)) {
             controlFields.add(field);
-         //   Collections.sort(controlFields);
-        } else {
-            dataFields.add(field);
-           // Collections.sort(dataFields);
-        }
-
-    }
-    
-    
-    /* 
-     * @author Priyank Doshi
-     * Modified 10/5/11 
-     * Created an optional OverLoaded method with Permissive Flag 
-     * for the user to output the records with Sorted Tags and 
-     * check for duplicate Control Number Field 001.
-     * */
-    
-    public void addVariableField(VariableField field, boolean permissive) {
-        if (!(field instanceof VariableField))
-            throw new IllegalAddException("Expected VariableField instance");
-
-      
-        String tag = field.getTag();
-        
-        if(permissive) {
-        
-        if (Verifier.isControlNumberField(tag) && permissive) {
-        	
-          if (Verifier.hasControlNumberField(controlFields) && !duplicateControlField.add("tag"))
-              	  controlFields.set(0, field);
-            else {
-            	controlFields.add(0, field);
-            	throw new IllegalAddException("Duplicate Control Number Field Instance");
-            }
-         Collections.sort(controlFields);
-        } else if (Verifier.isControlField(tag)) {
-            controlFields.add(field);
-           Collections.sort(controlFields);
+            Collections.sort(controlFields);
         } else {
             dataFields.add(field);
             Collections.sort(dataFields);
         }
 
-    } else {
-    	
-			if (Verifier.isControlNumberField(tag) && permissive) {
-
-				if (Verifier.hasControlNumberField(controlFields)
-						&& !duplicateControlField.add("tag"))
-					controlFields.set(0, field);
-				else
-					controlFields.add(0, field);
-				// Collections.sort(controlFields);
-			} else if (Verifier.isControlField(tag)) {
-				controlFields.add(field);
-				// Collections.sort(controlFields);
-			} else {
-				dataFields.add(field);
-				// Collections.sort(dataFields);
-			}
-
-		}
-	}
-
-
+    }
 
     public void removeVariableField(VariableField field) {
         String tag = field.getTag();
