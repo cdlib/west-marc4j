@@ -74,18 +74,21 @@ public class RecordImpl implements Record {
     }
 
     /**
-     * Adds a <code>VariableField</code> being a <code>ControlField</code>
-     * or <code>DataField</code>.
-     * 
-     * If the <code>VariableField</code> is a control number field (001) and
-     * the record already has a control number field, the field is replaced with
-     * the new instance.
-     * 
-     * @param field
-     *            the <code>VariableField</code>
-     * @throws IllegalAddException
-     *             when the parameter is not a <code>VariableField</code>
-     *             instance
+	 * Adds a <code>VariableField</code> being a <code>ControlField</code> or
+	 * <code>DataField</code>.
+	 * 
+	 * If the <code>VariableField</code> is a control number field (001) and the
+	 * record already has a control number field, the field will be added with
+	 * the new instance.
+	 * 
+	 * Change made in method is to Unsort
+	 * <code>DataField<code> and <code>ControlField<code>
+	 * 
+	 * @param field
+	 *            the <code>VariableField</code>
+	 * @throws IllegalAddException
+	 *             when the parameter is not a <code>VariableField</code>
+	 *             instance
      */
     public void addVariableField(VariableField field) {
         if (!(field instanceof VariableField))
@@ -93,10 +96,11 @@ public class RecordImpl implements Record {
 
         String tag = field.getTag();
         if (Verifier.isControlNumberField(tag)) {
-            if (Verifier.hasControlNumberField(controlFields))
-                controlFields.set(0, field);
-            else
+//            if (Verifier.hasControlNumberField(controlFields))
+//                controlFields.set(0, field);
+//            else
                 controlFields.add(0, field);
+<<<<<<< HEAD
             Collections.sort(controlFields);
         } else if (Verifier.isControlField(tag)) {
             controlFields.add(field);
@@ -107,6 +111,62 @@ public class RecordImpl implements Record {
         }
 
     }
+=======
+//                Collections.sort(controlFields);
+        } else if (Verifier.isControlField(tag)) {
+            controlFields.add(field);
+//            Collections.sort(controlFields);
+        } else {
+            dataFields.add(field);
+//            Collections.sort(dataFields);
+        }
+
+    }
+
+	/**
+	 * Adds a <code>VariableField</code> being a <code>ControlField</code> or
+	 * <code>DataField</code>.
+	 * 
+	 * If the <code>VariableField</code> is a control number field (001) and the
+	 * record already has a control number field, the field will be added with
+	 * the new instance.
+	 * 
+	 * Flag <code>isSort</code> is used for Sorting <code>VariableField</code>
+	 * being a <code>ControlField</code> or <code>DataField</code>.
+	 * 
+	 * @param field
+	 *            the <code>VariableField</code>
+	 * @throws IllegalAddException
+	 *             when the parameter is not a <code>VariableField</code>
+	 *             instance
+	 */
+    
+    public void addVariableField(VariableField field, boolean isSort) {
+		if (!(field instanceof VariableField))
+			throw new IllegalAddException("Expected VariableField instance");
+
+		if (isSort) {
+			String tag = field.getTag();
+			if (Verifier.isControlNumberField(tag)) {
+//				if (Verifier.hasControlNumberField(controlFields))
+//					controlFields.set(0, field);
+//				else
+					controlFields.add(0, field);
+				Collections.sort(controlFields);
+			} else if (Verifier.isControlField(tag)) {
+				controlFields.add(field);
+				Collections.sort(controlFields);
+			} else {
+				dataFields.add(field);
+				Collections.sort(dataFields);
+			}
+		} else 
+			 throw new IllegalAddException("boolean value needs to be True for sorted output");
+    }
+    
+    
+
+>>>>>>> a0c2a7f864f83e50dc4773e789d3237439b72770
 
     public void removeVariableField(VariableField field) {
         String tag = field.getTag();
