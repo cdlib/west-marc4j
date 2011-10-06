@@ -71,20 +71,6 @@ public interface Record extends Serializable {
      * 
      * @param field
      *            the <code>VariableField</code>
-     * @param permissive 
-     * @throws IllegalAddException
-     *             when the parameter is not a <code>VariableField</code>
-     *             instance
-     */
-    public void addVariableField(VariableField field, boolean permissive);
-    
-    
-    /**
-     * Adds a <code>VariableField</code>.
-     * 
-     * @param field
-     *            the <code>VariableField</code>
-     * @param permissive 
      * @throws IllegalAddException
      *             when the parameter is not a <code>VariableField</code>
      *             instance

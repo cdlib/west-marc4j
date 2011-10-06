@@ -22,10 +22,8 @@ package org.marc4j.marc.impl;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
 
 import org.marc4j.marc.ControlField;
 import org.marc4j.marc.IllegalAddException;
@@ -41,26 +39,15 @@ import org.marc4j.marc.VariableField;
  */
 public class RecordImpl implements Record {
 
-    /**
-	 * @param id
-	 * @param leader
-	 * @param controlFields
-	 * @param dataFields
-	 * @param type
-	 */
-
-
-	private Long id;
+    private Long id;
 
     private Leader leader;
 
-    protected List controlFields;
+    private List controlFields;
 
-    protected List dataFields;
+    private List dataFields;
 
     private String type;
-    
-    private Set<String> duplicateControlField;
 
     /**
      * Creates a new <code>Record</code>.
@@ -68,7 +55,6 @@ public class RecordImpl implements Record {
     public RecordImpl() {
         controlFields = new ArrayList();
         dataFields = new ArrayList();
-        duplicateControlField = new HashSet<String>();
     }
 
     public void setType(String type) {
@@ -87,7 +73,7 @@ public class RecordImpl implements Record {
         return leader;
     }
 
-	/**
+    /**
 	 * Adds a <code>VariableField</code> being a <code>ControlField</code> or
 	 * <code>DataField</code>.
 	 * 
@@ -95,7 +81,7 @@ public class RecordImpl implements Record {
 	 * record already has a control number field, the field will be added with
 	 * the new instance.
 	 * 
-	 * Change made in method is Unsort
+	 * Change made in method is to Unsort
 	 * <code>DataField<code> and <code>ControlField<code>
 	 * 
 	 * @param field
@@ -103,7 +89,7 @@ public class RecordImpl implements Record {
 	 * @throws IllegalAddException
 	 *             when the parameter is not a <code>VariableField</code>
 	 *             instance
-	 */
+     */
     public void addVariableField(VariableField field) {
         if (!(field instanceof VariableField))
             throw new IllegalAddException("Expected VariableField instance");
@@ -114,19 +100,59 @@ public class RecordImpl implements Record {
 //                controlFields.set(0, field);
 //            else
                 controlFields.add(0, field);
-//              Collections.sort(controlFields);
+//                Collections.sort(controlFields);
         } else if (Verifier.isControlField(tag)) {
-               controlFields.add(field);
-//             Collections.sort(controlFields);
+            controlFields.add(field);
+//            Collections.sort(controlFields);
         } else {
-               dataFields.add(field);
-//                  Collections.sort(dataFields);
+            dataFields.add(field);
+//            Collections.sort(dataFields);
         }
 
     }
+
+	/**
+	 * Adds a <code>VariableField</code> being a <code>ControlField</code> or
+	 * <code>DataField</code>.
+	 * 
+	 * If the <code>VariableField</code> is a control number field (001) and the
+	 * record already has a control number field, the field will be added with
+	 * the new instance.
+	 * 
+	 * Flag <code>isSort</code> is used for Sorting <code>VariableField</code>
+	 * being a <code>ControlField</code> or <code>DataField</code>.
+	 * 
+	 * @param field
+	 *            the <code>VariableField</code>
+	 * @throws IllegalAddException
+	 *             when the parameter is not a <code>VariableField</code>
+	 *             instance
+	 */
     
+    public void addVariableField(VariableField field, boolean isSort) {
+		if (!(field instanceof VariableField))
+			throw new IllegalAddException("Expected VariableField instance");
 
-
+		if (isSort) {
+			String tag = field.getTag();
+			if (Verifier.isControlNumberField(tag)) {
+//				if (Verifier.hasControlNumberField(controlFields))
+//					controlFields.set(0, field);
+//				else
+					controlFields.add(0, field);
+				Collections.sort(controlFields);
+			} else if (Verifier.isControlField(tag)) {
+				controlFields.add(field);
+				Collections.sort(controlFields);
+			} else {
+				dataFields.add(field);
+				Collections.sort(dataFields);
+			}
+		} else 
+			 throw new IllegalAddException("boolean value needs to be True for sorted output");
+    }
+    
+    
 
 
     public void removeVariableField(VariableField field) {
