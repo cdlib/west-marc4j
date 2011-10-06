@@ -1,0 +1,195 @@
+init:  duration 0 seconds
+
+prepare:
+    [mkdir] Skipping /home/papr/marc4j-working/build because it already exists.
+prepare:  duration 0 seconds
+
+compile:
+    [javac] org/marc4j/Constants.java omitted as /home/papr/marc4j-working/build/org/marc4j/Constants.class is up to date.
+    [javac] org/marc4j/ErrorHandler.java omitted as /home/papr/marc4j-working/build/org/marc4j/ErrorHandler.class is up to date.
+    [javac] org/marc4j/MarcDirStreamReader.java omitted as /home/papr/marc4j-working/build/org/marc4j/MarcDirStreamReader.class is up to date.
+    [javac] org/marc4j/MarcException.java omitted as /home/papr/marc4j-working/build/org/marc4j/MarcException.class is up to date.
+    [javac] org/marc4j/MarcPermissiveStreamReader.java omitted as /home/papr/marc4j-working/build/org/marc4j/MarcPermissiveStreamReader.class is up to date.
+    [javac] org/marc4j/MarcReader.java omitted as /home/papr/marc4j-working/build/org/marc4j/MarcReader.class is up to date.
+    [javac] org/marc4j/MarcStreamReader.java omitted as /home/papr/marc4j-working/build/org/marc4j/MarcStreamReader.class is up to date.
+    [javac] org/marc4j/MarcStreamWriter.java omitted as /home/papr/marc4j-working/build/org/marc4j/MarcStreamWriter.class is up to date.
+    [javac] org/marc4j/MarcWriter.java omitted as /home/papr/marc4j-working/build/org/marc4j/MarcWriter.class is up to date.
+    [javac] org/marc4j/MarcXmlHandler.java omitted as /home/papr/marc4j-working/build/org/marc4j/MarcXmlHandler.class is up to date.
+    [javac] org/marc4j/MarcXmlParser.java omitted as /home/papr/marc4j-working/build/org/marc4j/MarcXmlParser.class is up to date.
+    [javac] org/marc4j/MarcXmlParserThread.java omitted as /home/papr/marc4j-working/build/org/marc4j/MarcXmlParserThread.class is up to date.
+    [javac] org/marc4j/MarcXmlReader.java omitted as /home/papr/marc4j-working/build/org/marc4j/MarcXmlReader.class is up to date.
+    [javac] org/marc4j/MarcXmlWriter.java omitted as /home/papr/marc4j-working/build/org/marc4j/MarcXmlWriter.class is up to date.
+    [javac] org/marc4j/RecordStack.java omitted as /home/papr/marc4j-working/build/org/marc4j/RecordStack.class is up to date.
+    [javac] org/marc4j/converter/CharConverter.java omitted as /home/papr/marc4j-working/build/org/marc4j/converter/CharConverter.class is up to date.
+    [javac] org/marc4j/converter/impl/AnselToUnicode.java omitted as /home/papr/marc4j-working/build/org/marc4j/converter/impl/AnselToUnicode.class is up to date.
+    [javac] org/marc4j/converter/impl/CodeTable.java omitted as /home/papr/marc4j-working/build/org/marc4j/converter/impl/CodeTable.class is up to date.
+    [javac] org/marc4j/converter/impl/CodeTableGenerator.java omitted as /home/papr/marc4j-working/build/org/marc4j/converter/impl/CodeTableGenerator.class is up to date.
+    [javac] org/marc4j/converter/impl/CodeTableHandler.java omitted as /home/papr/marc4j-working/build/org/marc4j/converter/impl/CodeTableHandler.class is up to date.
+    [javac] org/marc4j/converter/impl/CodeTableInterface.java omitted as /home/papr/marc4j-working/build/org/marc4j/converter/impl/CodeTableInterface.class is up to date.
+    [javac] org/marc4j/converter/impl/CodeTableTracker.java omitted as /home/papr/marc4j-working/build/org/marc4j/converter/impl/CodeTableTracker.class is up to date.
+    [javac] org/marc4j/converter/impl/Iso5426ToUnicode.java omitted as /home/papr/marc4j-working/build/org/marc4j/converter/impl/Iso5426ToUnicode.class is up to date.
+    [javac] org/marc4j/converter/impl/Iso6937ToUnicode.java omitted as /home/papr/marc4j-working/build/org/marc4j/converter/impl/Iso6937ToUnicode.class is up to date.
+    [javac] org/marc4j/converter/impl/ReverseCodeTable.java omitted as /home/papr/marc4j-working/build/org/marc4j/converter/impl/ReverseCodeTable.class is up to date.
+    [javac] org/marc4j/converter/impl/ReverseCodeTableHandler.java omitted as /home/papr/marc4j-working/build/org/marc4j/converter/impl/ReverseCodeTableHandler.class is up to date.
+    [javac] org/marc4j/converter/impl/UnicodeToAnsel.java omitted as /home/papr/marc4j-working/build/org/marc4j/converter/impl/UnicodeToAnsel.class is up to date.
+    [javac] org/marc4j/converter/impl/UnicodeToIso5426.java omitted as /home/papr/marc4j-working/build/org/marc4j/converter/impl/UnicodeToIso5426.class is up to date.
+    [javac] org/marc4j/converter/impl/UnicodeToIso6937.java omitted as /home/papr/marc4j-working/build/org/marc4j/converter/impl/UnicodeToIso6937.class is up to date.
+    [javac] org/marc4j/marc/ControlField.java omitted as /home/papr/marc4j-working/build/org/marc4j/marc/ControlField.class is up to date.
+    [javac] org/marc4j/marc/DataField.java omitted as /home/papr/marc4j-working/build/org/marc4j/marc/DataField.class is up to date.
+    [javac] org/marc4j/marc/IllegalAddException.java omitted as /home/papr/marc4j-working/build/org/marc4j/marc/IllegalAddException.class is up to date.
+    [javac] org/marc4j/marc/Leader.java omitted as /home/papr/marc4j-working/build/org/marc4j/marc/Leader.class is up to date.
+    [javac] org/marc4j/marc/MarcFactory.java omitted as /home/papr/marc4j-working/build/org/marc4j/marc/MarcFactory.class is up to date.
+    [javac] org/marc4j/marc/Record.java omitted as /home/papr/marc4j-working/build/org/marc4j/marc/Record.class is up to date.
+    [javac] org/marc4j/marc/Subfield.java omitted as /home/papr/marc4j-working/build/org/marc4j/marc/Subfield.class is up to date.
+    [javac] org/marc4j/marc/VariableField.java omitted as /home/papr/marc4j-working/build/org/marc4j/marc/VariableField.class is up to date.
+    [javac] org/marc4j/marc/impl/ControlFieldImpl.java omitted as /home/papr/marc4j-working/build/org/marc4j/marc/impl/ControlFieldImpl.class is up to date.
+    [javac] org/marc4j/marc/impl/DataFieldImpl.java omitted as /home/papr/marc4j-working/build/org/marc4j/marc/impl/DataFieldImpl.class is up to date.
+    [javac] org/marc4j/marc/impl/LeaderImpl.java omitted as /home/papr/marc4j-working/build/org/marc4j/marc/impl/LeaderImpl.class is up to date.
+    [javac] org/marc4j/marc/impl/MarcFactoryImpl.java omitted as /home/papr/marc4j-working/build/org/marc4j/marc/impl/MarcFactoryImpl.class is up to date.
+    [javac] org/marc4j/marc/impl/RecordImpl.java omitted as /home/papr/marc4j-working/build/org/marc4j/marc/impl/RecordImpl.class is up to date.
+    [javac] org/marc4j/marc/impl/SubfieldImpl.java omitted as /home/papr/marc4j-working/build/org/marc4j/marc/impl/SubfieldImpl.class is up to date.
+    [javac] org/marc4j/marc/impl/VariableFieldImpl.java omitted as /home/papr/marc4j-working/build/org/marc4j/marc/impl/VariableFieldImpl.class is up to date.
+    [javac] org/marc4j/marc/impl/Verifier.java omitted as /home/papr/marc4j-working/build/org/marc4j/marc/impl/Verifier.class is up to date.
+    [javac] org/marc4j/samples/AddLocationExample.java omitted as /home/papr/marc4j-working/build/org/marc4j/samples/AddLocationExample.class is up to date.
+    [javac] org/marc4j/samples/CheckAgencyExample.java omitted as /home/papr/marc4j-working/build/org/marc4j/samples/CheckAgencyExample.class is up to date.
+    [javac] org/marc4j/samples/ControlFieldExample.java omitted as /home/papr/marc4j-working/build/org/marc4j/samples/ControlFieldExample.class is up to date.
+    [javac] org/marc4j/samples/DataFieldExample.java omitted as /home/papr/marc4j-working/build/org/marc4j/samples/DataFieldExample.class is up to date.
+    [javac] org/marc4j/samples/HandleExceptionExample.java omitted as /home/papr/marc4j-working/build/org/marc4j/samples/HandleExceptionExample.class is up to date.
+    [javac] org/marc4j/samples/Marc2DomExample.java omitted as /home/papr/marc4j-working/build/org/marc4j/samples/Marc2DomExample.class is up to date.
+    [javac] org/marc4j/samples/Marc2MarcXmlExample.java omitted as /home/papr/marc4j-working/build/org/marc4j/samples/Marc2MarcXmlExample.class is up to date.
+    [javac] org/marc4j/samples/Marc2ModsExample.java omitted as /home/papr/marc4j-working/build/org/marc4j/samples/Marc2ModsExample.class is up to date.
+    [javac] org/marc4j/samples/Marc2ModsInDomExample.java omitted as /home/papr/marc4j-working/build/org/marc4j/samples/Marc2ModsInDomExample.class is up to date.
+    [javac] org/marc4j/samples/Marc8ToMarcXmlExample.java omitted as /home/papr/marc4j-working/build/org/marc4j/samples/Marc8ToMarcXmlExample.class is up to date.
+    [javac] org/marc4j/samples/Marc8ToUnicodeExample.java omitted as /home/papr/marc4j-working/build/org/marc4j/samples/Marc8ToUnicodeExample.class is up to date.
+    [javac] org/marc4j/samples/ModsToMarc21lExample.java omitted as /home/papr/marc4j-working/build/org/marc4j/samples/ModsToMarc21lExample.class is up to date.
+    [javac] org/marc4j/samples/NonSortExample.java omitted as /home/papr/marc4j-working/build/org/marc4j/samples/NonSortExample.class is up to date.
+    [javac] org/marc4j/samples/PermissiveReaderExample.java omitted as /home/papr/marc4j-working/build/org/marc4j/samples/PermissiveReaderExample.class is up to date.
+    [javac] org/marc4j/samples/PersonalNamesExample.java omitted as /home/papr/marc4j-working/build/org/marc4j/samples/PersonalNamesExample.class is up to date.
+    [javac] org/marc4j/samples/PersonalNamesReader.java omitted as /home/papr/marc4j-working/build/org/marc4j/samples/PersonalNamesReader.class is up to date.
+    [javac] org/marc4j/samples/ReadFromInputSourceExample.java omitted as /home/papr/marc4j-working/build/org/marc4j/samples/ReadFromInputSourceExample.class is up to date.
+    [javac] org/marc4j/samples/ReadMarcExample.java omitted as /home/papr/marc4j-working/build/org/marc4j/samples/ReadMarcExample.class is up to date.
+    [javac] org/marc4j/samples/ReadMarcFromURLExample.java omitted as /home/papr/marc4j-working/build/org/marc4j/samples/ReadMarcFromURLExample.class is up to date.
+    [javac] org/marc4j/samples/ReadMarcXmlExample.java omitted as /home/papr/marc4j-working/build/org/marc4j/samples/ReadMarcXmlExample.class is up to date.
+    [javac] org/marc4j/samples/ReadSingleRecordExample.java omitted as /home/papr/marc4j-working/build/org/marc4j/samples/ReadSingleRecordExample.class is up to date.
+    [javac] org/marc4j/samples/RemoveLocalFieldsExample.java omitted as /home/papr/marc4j-working/build/org/marc4j/samples/RemoveLocalFieldsExample.class is up to date.
+    [javac] org/marc4j/samples/StylesheetChainExample.java omitted as /home/papr/marc4j-working/build/org/marc4j/samples/StylesheetChainExample.class is up to date.
+    [javac] org/marc4j/samples/TagAnalysisExample.java omitted as /home/papr/marc4j-working/build/org/marc4j/samples/TagAnalysisExample.class is up to date.
+    [javac] org/marc4j/samples/TemplatesExample.java omitted as /home/papr/marc4j-working/build/org/marc4j/samples/TemplatesExample.class is up to date.
+    [javac] org/marc4j/samples/WriteMarcExample.java omitted as /home/papr/marc4j-working/build/org/marc4j/samples/WriteMarcExample.class is up to date.
+    [javac] org/marc4j/samples/XercesSerializerExample.java omitted as /home/papr/marc4j-working/build/org/marc4j/samples/XercesSerializerExample.class is up to date.
+    [javac] org/marc4j/test/AllTests.java omitted as /home/papr/marc4j-working/build/org/marc4j/test/AllTests.class is up to date.
+    [javac] org/marc4j/test/ControlFieldTest.java omitted as /home/papr/marc4j-working/build/org/marc4j/test/ControlFieldTest.class is up to date.
+    [javac] org/marc4j/test/DataFieldTest.java omitted as /home/papr/marc4j-working/build/org/marc4j/test/DataFieldTest.class is up to date.
+    [javac] org/marc4j/test/LeaderTest.java omitted as /home/papr/marc4j-working/build/org/marc4j/test/LeaderTest.class is up to date.
+    [javac] org/marc4j/test/ReaderTest.java omitted as /home/papr/marc4j-working/build/org/marc4j/test/ReaderTest.class is up to date.
+    [javac] org/marc4j/test/RecordTest.java omitted as /home/papr/marc4j-working/build/org/marc4j/test/RecordTest.class is up to date.
+    [javac] org/marc4j/test/RoundtripTest.java omitted as /home/papr/marc4j-working/build/org/marc4j/test/RoundtripTest.class is up to date.
+    [javac] org/marc4j/test/SubfieldTest.java omitted as /home/papr/marc4j-working/build/org/marc4j/test/SubfieldTest.class is up to date.
+    [javac] org/marc4j/test/WriterTest.java omitted as /home/papr/marc4j-working/build/org/marc4j/test/WriterTest.class is up to date.
+    [javac] org/marc4j/util/MarcXmlDriver.java omitted as /home/papr/marc4j-working/build/org/marc4j/util/MarcXmlDriver.class is up to date.
+    [javac] org/marc4j/util/XmlMarcDriver.java omitted as /home/papr/marc4j-working/build/org/marc4j/util/XmlMarcDriver.class is up to date.
+     [copy] org/marc4j/converter/impl/resources/codetables.xml omitted as /home/papr/marc4j-working/build/org/marc4j/converter/impl/resources/codetables.xml is up to date.
+     [copy] org/marc4j/converter/impl/resources/codetablesnocjk.xml omitted as /home/papr/marc4j-working/build/org/marc4j/converter/impl/resources/codetablesnocjk.xml is up to date.
+     [copy] org/marc4j/samples/resources/modsoutput.xml omitted as /home/papr/marc4j-working/build/org/marc4j/samples/resources/modsoutput.xml is up to date.
+     [copy] org/marc4j/samples/resources/summerland.xml omitted as /home/papr/marc4j-working/build/org/marc4j/samples/resources/summerland.xml is up to date.
+     [copy] org/marc4j/test/resources/chabon.xml omitted as /home/papr/marc4j-working/build/org/marc4j/test/resources/chabon.xml is up to date.
+     [copy] org/marc4j/test/resources/summerland.xml omitted as /home/papr/marc4j-working/build/org/marc4j/test/resources/summerland.xml is up to date.
+     [copy] No sources found.
+Project base dir set to: /home/papr/marc4j-working
+  [antcall] calling target(s) [codetablegen] in build file /home/papr/marc4j-working/build.xml
+parsing buildfile /home/papr/marc4j-working/build.xml with URI = file:/home/papr/marc4j-working/build.xml
+Project base dir set to: /home/papr/marc4j-working
+ [property] Loading /home/papr/marc4j-working/build.properties
+Override ignored for property "project.name"
+Override ignored for property "version"
+Override ignored for property "apidoc.dir"
+Override ignored for property "src.dir"
+Override ignored for property "dist.dir"
+Override ignored for property "build.dir"
+Override ignored for property "lib.dir"
+Override ignored for property "test.class.name"
+Build sequence for target(s) `codetablegen' is [codetablegen]
+Complete build sequence is [codetablegen, init, prepare, compile, jar, javadoc, clean, test, dist, ]
+  [antcall] Entering /home/papr/marc4j-working/build.xml...
+Build sequence for target(s) `codetablegen' is [codetablegen]
+Complete build sequence is [codetablegen, init, prepare, compile, jar, javadoc, clean, test, dist, ]
+
+codetablegen:
+    [mkdir] Created dir: /home/papr/marc4j-working/src/org/marc4j/converter/impl/new
+     [java] Executing '/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0/jre/bin/java' with arguments:
+'-classpath'
+'/home/papr/marc4j-working/build'
+'org.marc4j.converter.impl.CodeTableGenerator'
+
+The ' characters around the executable and arguments are
+not part of the command.
+     [java] Output redirected to /home/papr/marc4j-working/src/org/marc4j/converter/impl/new/CodeTableGenerated.java
+     [copy] No sources found.
+     [copy] No sources found.
+   [delete] Deleting directory /home/papr/marc4j-working/src/org/marc4j/converter/impl/new
+   [delete] Deleting /home/papr/marc4j-working/src/org/marc4j/converter/impl/new/CodeTableGenerated.java
+   [delete] Deleting directory /home/papr/marc4j-working/src/org/marc4j/converter/impl/new
+codetablegen:  duration 1 second
+  [antcall] Exiting /home/papr/marc4j-working/build.xml.
+    [javac] org/marc4j/converter/impl/CodeTableGenerated.java omitted as /home/papr/marc4j-working/build/org/marc4j/converter/impl/CodeTableGenerated.class is up to date.
+compile:  duration 1 second
+
+jar:
+      [jar] org/marc4j/Constants.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/Constants.class is up to date.
+      [jar] org/marc4j/ErrorHandler$Error.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/ErrorHandler$Error.class is up to date.
+      [jar] org/marc4j/ErrorHandler.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/ErrorHandler.class is up to date.
+      [jar] org/marc4j/MarcDirStreamReader$1.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/MarcDirStreamReader$1.class is up to date.
+      [jar] org/marc4j/MarcDirStreamReader.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/MarcDirStreamReader.class is up to date.
+      [jar] org/marc4j/MarcException.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/MarcException.class is up to date.
+      [jar] org/marc4j/MarcPermissiveStreamReader.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/MarcPermissiveStreamReader.class is up to date.
+      [jar] org/marc4j/MarcReader.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/MarcReader.class is up to date.
+      [jar] org/marc4j/MarcStreamReader.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/MarcStreamReader.class is up to date.
+      [jar] org/marc4j/MarcStreamWriter.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/MarcStreamWriter.class is up to date.
+      [jar] org/marc4j/MarcWriter.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/MarcWriter.class is up to date.
+      [jar] org/marc4j/MarcXmlHandler.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/MarcXmlHandler.class is up to date.
+      [jar] org/marc4j/MarcXmlParser.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/MarcXmlParser.class is up to date.
+      [jar] org/marc4j/MarcXmlParserThread.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/MarcXmlParserThread.class is up to date.
+      [jar] org/marc4j/MarcXmlReader.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/MarcXmlReader.class is up to date.
+      [jar] org/marc4j/MarcXmlWriter.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/MarcXmlWriter.class is up to date.
+      [jar] org/marc4j/RecordStack.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/RecordStack.class is up to date.
+      [jar] org/marc4j/converter/CharConverter.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/converter/CharConverter.class is up to date.
+      [jar] org/marc4j/converter/impl/AnselToUnicode$CodeTracker.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/converter/impl/AnselToUnicode$CodeTracker.class is up to date.
+      [jar] org/marc4j/converter/impl/AnselToUnicode$Queue.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/converter/impl/AnselToUnicode$Queue.class is up to date.
+      [jar] org/marc4j/converter/impl/AnselToUnicode.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/converter/impl/AnselToUnicode.class is up to date.
+      [jar] org/marc4j/converter/impl/CodeTable.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/converter/impl/CodeTable.class is up to date.
+      [jar] org/marc4j/converter/impl/CodeTableGenerated.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/converter/impl/CodeTableGenerated.class is up to date.
+      [jar] org/marc4j/converter/impl/CodeTableHandler.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/converter/impl/CodeTableHandler.class is up to date.
+      [jar] org/marc4j/converter/impl/CodeTableInterface.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/converter/impl/CodeTableInterface.class is up to date.
+      [jar] org/marc4j/converter/impl/CodeTableTracker.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/converter/impl/CodeTableTracker.class is up to date.
+      [jar] org/marc4j/converter/impl/Iso5426ToUnicode.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/converter/impl/Iso5426ToUnicode.class is up to date.
+      [jar] org/marc4j/converter/impl/Iso6937ToUnicode.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/converter/impl/Iso6937ToUnicode.class is up to date.
+      [jar] org/marc4j/converter/impl/ReverseCodeTable.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/converter/impl/ReverseCodeTable.class is up to date.
+      [jar] org/marc4j/converter/impl/ReverseCodeTableHandler.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/converter/impl/ReverseCodeTableHandler.class is up to date.
+      [jar] org/marc4j/converter/impl/UnicodeToAnsel.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/converter/impl/UnicodeToAnsel.class is up to date.
+      [jar] org/marc4j/converter/impl/UnicodeToIso5426.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/converter/impl/UnicodeToIso5426.class is up to date.
+      [jar] org/marc4j/converter/impl/UnicodeToIso6937.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/converter/impl/UnicodeToIso6937.class is up to date.
+      [jar] org/marc4j/converter/impl/resources/codetables.xml omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/converter/impl/resources/codetables.xml is up to date.
+      [jar] org/marc4j/converter/impl/resources/codetablesnocjk.xml omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/converter/impl/resources/codetablesnocjk.xml is up to date.
+      [jar] org/marc4j/marc/ControlField.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/marc/ControlField.class is up to date.
+      [jar] org/marc4j/marc/DataField.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/marc/DataField.class is up to date.
+      [jar] org/marc4j/marc/IllegalAddException.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/marc/IllegalAddException.class is up to date.
+      [jar] org/marc4j/marc/Leader.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/marc/Leader.class is up to date.
+      [jar] org/marc4j/marc/MarcFactory.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/marc/MarcFactory.class is up to date.
+      [jar] org/marc4j/marc/Record.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/marc/Record.class is up to date.
+      [jar] org/marc4j/marc/Subfield.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/marc/Subfield.class is up to date.
+      [jar] org/marc4j/marc/VariableField.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/marc/VariableField.class is up to date.
+      [jar] org/marc4j/marc/impl/ControlFieldImpl.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/marc/impl/ControlFieldImpl.class is up to date.
+      [jar] org/marc4j/marc/impl/DataFieldImpl.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/marc/impl/DataFieldImpl.class is up to date.
+      [jar] org/marc4j/marc/impl/LeaderImpl.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/marc/impl/LeaderImpl.class is up to date.
+      [jar] org/marc4j/marc/impl/MarcFactoryImpl.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/marc/impl/MarcFactoryImpl.class is up to date.
+      [jar] org/marc4j/marc/impl/RecordImpl.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/marc/impl/RecordImpl.class is up to date.
+      [jar] org/marc4j/marc/impl/SubfieldImpl.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/marc/impl/SubfieldImpl.class is up to date.
+      [jar] org/marc4j/marc/impl/VariableFieldImpl.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/marc/impl/VariableFieldImpl.class is up to date.
+      [jar] org/marc4j/marc/impl/Verifier.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/marc/impl/Verifier.class is up to date.
+      [jar] org/marc4j/util/MarcXmlDriver.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/util/MarcXmlDriver.class is up to date.
+      [jar] org/marc4j/util/XmlMarcDriver.class omitted as /home/papr/marc4j-working/marc4j.jar:org/marc4j/util/XmlMarcDriver.class is up to date.
+      [jar] No Implementation-Title set.No Implementation-Version set.No Implementation-Vendor set.
+Location: /home/papr/marc4j-working/build.xml:70: 
+jar:  duration 0 seconds
+
+BUILD SUCCESSFUL
