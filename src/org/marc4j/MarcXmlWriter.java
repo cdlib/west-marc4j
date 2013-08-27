@@ -94,9 +94,8 @@ import com.ibm.icu.text.Normalizer;
  * <p>
  * In addition you can perform Unicode normalization. This is for example not
  * done by the MARC-8 to UCS/Unicode converter. With Unicode normalization text
- * is transformed into the canonical composed form. For example &quot;a´bc&quot;
- * is normalized to &quot;ábc&quot;. To perform normalization set Unicode
- * normalization to true:
+ * is transformed into the canonical composed form. 
+ * To perform normalization set Unicode normalization to true:
  * </p>
  * 
  * <pre>
