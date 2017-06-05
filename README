@@ -1,7 +1,5 @@
 7/5/2011
-This is a CDL customized version of marc4j
-To build: ant jar
+This is a CDL customized version of marc4j.
 
-Change history:
-09/10/2015 lliu Move marc4j.git to d2d-papr-stg:/papr/mnt/cdl/code/marc4j.git
-09/10/2015 lliu Update README from local repository on d2d-papr-dev:/papr/git-testing/marc4j/
+To build: ant jar
+jar file: marc4.jar
